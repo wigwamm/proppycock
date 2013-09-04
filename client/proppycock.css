@@ -1,0 +1,120 @@
+html, body { width:100%; height:100%; overflow:hidden; padding:0; font-size:14px; font-family: 'Raleway', sans-serif; }
+body { background:#fafafa; }
+
+/* General rules */
+.text-hidden { font: 0/0 a; text-shadow: none; color: transparent; }
+#bodyholder { width:826px; padding:0 20px; margin:0 auto; position:relative; }
+section { float:left; height:440px; margin:0; padding:0; }
+
+header { height:44px; width:100%; background:#211f1f; position:relative; }
+	header .header-holder, footer .footer-holder { width:826px; padding:0 20px; margin:0 auto; position:relative; }
+	header h1 { margin:0; display:inline-block; font-weight:600; font-size:140%; line-height:44px; }	
+		header h1 a { color:#E67E22; text-decoration: none; text-transform:uppercase; }
+			header h1 a:hover { color:#D35400; }
+	header form { display:inline-block; display:none; position:absolute; top:0px; right:0px; margin:0; font-weight:500; }
+		header form > .radio { float:left; margin:0; }
+			header form > .radio:first-child { margin-right:50px; }
+
+
+/* Questions */
+#questions { overflow:hidden; max-height:300px; position:relative; width:200%; }
+	#questions > ol { width:19999px; margin:0; }
+		#questions > ol > li { float:left; list-style:none; width:750px; margin-right:30px; opacity:0.4; filter: alpha(opacity=40);
+			webkit-transition: opacity 1s ease-in-out;
+		    -moz-transition: opacity 1s ease-in-out;
+		    -ms-transition: opacity 1s ease-in-out;
+		    -o-transition: opacity 1s ease-in-out;
+		    transition: opacity 1s ease-in-out;
+		} 
+			#questions > ol > li.active { opacity:1; filter: alpha(opacity=100); }
+
+/* Intro */
+li.intro { }
+	li.intro h2 { color:#F39C12; margin:0; font-weight:300; font-size:355%; }
+	li.intro p { margin:32px 0 32px 0; }
+	li.intro p { font-weight:300; color:#434242; font-size: 215%; line-height:100%; }
+		li.intro p > strong { font-weight:600; }
+	li.intro #begin { border:none; background:url(../img/begin-button.png) no-repeat 0 0; width:175px; height:42px; font-weight:500; color:#f4f4f4; font-family:'Raleway', sans-serif; font-size:145%; padding-right:45px; opacity:0.6; filter: alpha(opacity=60);
+		webkit-transition: opacity .3s ease-in-out;
+    	-moz-transition: opacity .3s ease-in-out;
+    	-ms-transition: opacity .3s ease-in-out;
+    	-o-transition: opacity .3s ease-in-out;
+    	transition: opacity .3s ease-in-out; }
+    	li.intro #begin:hover { opacity:1; filter: alpha(opacity=100); }
+
+/* Other questions */
+.question { color:#434242; height:300px; }
+	.question h4 { font-weight:300; font-size:215%; line-height:167%; margin:0; }
+	.question ul { margin:20px 0 0 0; padding:0; width:50%; }
+		.question ul > li { list-style: none; }
+			.question ul > li > button { margin:4px 4px 0 0; font-family:'Raleway', sans-serif; font-weight:600; height:34px; line-height:13px; color:#434242; border-bottom:1px solid #d5976b; font-size:115%; }
+				.question ul.col1 > li > button { width:48%;}
+				.question ul.col2 > li > button { float:left; width:48%; }
+				.question ul.col3 > li > button { float:left; width:30%; }
+
+
+/* Cover (Saves having to disable buttons) */
+#cover { position: absolute; top: 195px; right: -836px; height: 300px; width: 900px; }
+
+/* Radio buttons */
+form .radio { line-height:44px; text-transform: uppercase; color:#f4f4f4; }
+	form .radio.checked { color:#f4f4f4; }
+	form .radio > .icons, form .radio.checked > .icons { color:transparent; margin-top:10px;}
+		form .radio > .icons > span { display: block; height: 25px; width: 25px; }
+		form .radio > .icons > .radio-unchecked { background: url(../img/icons/unchecked.png) no-repeat 0 0; }
+		form .radio > .icons > .radio-checked { background: url(../img/icons/checked.png) no-repeat 0 0; }
+
+/* Proppycock */
+#proppycock { position:relative; height:155px; width:836px; margin-bottom:40px; left:-100%;
+		webkit-transition: all .3s ease-in-out;
+    	-moz-transition: all .3s ease-in-out;
+    	-ms-transition: all .3s ease-in-out;
+    	-o-transition: all .3s ease-in-out;
+    	transition: all .3s ease-in-out; } 
+    #proppycock.begun { left:0; }
+	#proppycock.active, #proppycock.hover { height:300px; left:0; }
+	#proppycock > h2 { margin:0 0 10px 0; font-family: 'Raleway', sans-serif; font-weight:500; font-size:215%; color:#434242; }
+	#proppycock > textarea { width:60% !important; border-width:1px; display:block; height:47px !important;
+			webkit-transition: height .3s ease-in-out;
+	    	-moz-transition: height .3s ease-in-out;
+	    	-ms-transition: height .3s ease-in-out;
+	    	-o-transition: height .3s ease-in-out;
+	    	transition: height .3s ease-in-out; }
+		#proppycock.active > textarea, #proppycock > textarea:hover { height:204px !important; } 
+	#proppycock > form { display:inline-block; }
+		#proppycock > form .radio, #proppycock > form .radio.checked { color:#434241; }
+		#proppycock > form > label { display:inline-block; margin-right:20px; }
+	#proppycock > .btn-group { float:right; margin-right:37%; }
+		#proppycock #tweet { text-decoration:none; opacity:0; filter:alpha(opacity=0); background:url(../img/tweet-buton.png) no-repeat 0 0; width:185px; height:42px; line-height:42px; font-size:20px; }
+	    	#proppycock #tweet.active:hover { opacity:1; filter: alpha(opacity=100); }
+	    	#proppycock #tweet.active { opacity:0.6; filter: alpha(opacity=60); display:block; 
+	    		webkit-transition: opacity .3s ease-in-out;
+		    	-moz-transition: opacity .3s ease-in-out;
+		    	-ms-transition: opacity .3s ease-in-out;
+		    	-o-transition: opacity .3s ease-in-out;
+		    	transition: opacity .3s ease-in-out; }
+			#proppycock #tweet > span { margin-left:28px; color:#f4f4f4; }
+
+/* Footer */
+footer { width:100%; position:absolute; bottom:0px; background:#EDECEB; height:40px; font-size:105%; }
+	footer .footer-holder { line-height: 40px; font-weight:700; }
+		footer p { display:inline-block; float: left; line-height: 40px; margin-right:10px; }
+			footer p > a { text-decoration: none; color:#e16104; }
+				footer p > a:hover { text-decoration: underline; color:#D35400;; }
+		/* Social Media */
+		#socialmedia { float:right; display:inline-block; }	
+		#socialmedia > h5 { display:inline-block; font-style:italic; font-weight:600; font-size:140%; color:#666; margin:0; position:relative; top:-19px; }
+		#socialmedia > ul { display:inline-block; margin:0; padding-left:10px; }
+			#socialmedia > ul > li { margin:7px 0px 0 4px; background:url(../img/icons/icon-background.png); float:left; list-style: none; height:26px; width:27px; 
+				-webkit-transition: all .3s ease-in-out;
+		        -moz-transition: all .3s ease-in-out;
+		        -ms-transition: all .3s ease-in-out;
+		        -o-transition: all .3s ease-in-out;
+		        transition: all .3s ease-in-out; }
+				#socialmedia > ul > li:hover { background-position:0 -29px; }
+				#socialmedia > ul > li > a { height:26px; width:27px; display:block; background-position: center center; background-repeat:no-repeat; }
+				#socialmedia > ul > li#twitter > a { background-image:url(../img/icons/twitter.png); } 
+				#socialmedia > ul > li#facebook > a { background-image:url(../img/icons/facebook.png); }
+				#socialmedia > ul > li#angel > a { background-image:url(../img/icons/angellist.png);}
+				#socialmedia > ul > li#tumblr > a { background-image:url(../img/icons/tumblr.png);}
+				footer ul > li { list-style: none; float:left; }

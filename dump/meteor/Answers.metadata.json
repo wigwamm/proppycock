@@ -1,0 +1,1 @@
+{ "options" : { "create" : "Answers" }, "indexes" : [ { "v" : 1, "key" : { "_id" : 1 }, "ns" : "meteor.Answers", "name" : "_id_" } ] }
